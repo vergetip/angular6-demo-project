@@ -1,0 +1,60 @@
+<div *ngIf="!people">loading...</div>
+
+<div class="columns" *ngIf="people">
+    <div class="column is-two-thirds">
+
+    <input type="text" [(ngModel)]="searchText" class="input" placeholder="search"/>
+
+    <form  *ngIf="form" [formGroup]="form" (ngSubmit)="submit()">
+      <table class="table is-narrow is-fullwidth is-hoverable">
+        <thead>
+          <tr>
+              <th>Select</th>
+              <th>Name</th>
+              <th>Surname</th>
+              <th>Region</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let person of people | filter: searchText; let i = index" formArrayName="people">
+            <td><input type="checkbox" [formControlName]="i" (change)="submit()"></td>
+            <td>{{person.name}}</td>
+            <td>{{person.surname}}</td>
+            <td>{{person.region}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+
+  <div class="column is-one-third" *ngIf="nameDetails.RelatedTopics">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+            Details
+        </p>
+      </header>    
+      <div class="card-content" *ngIf="nameDetails.RelatedTopics[0]">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48" *ngIf="nameDetails.RelatedTopics[0].Icon">
+              <img *ngIf="nameDetails.RelatedTopics[0].Icon.URL" src="{{nameDetails.RelatedTopics[0].Icon.URL}}">
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4" *ngIf="nameDetails.RelatedTopics[0].Text">{{nameDetails.RelatedTopics[0].Text}}</p>
+            <p class="subtitle is-6" *ngIf="nameDetails.RelatedTopics[0].FirstURL"><a href="{{nameDetails.RelatedTopics[0].FirstURL}}" target="_new">{{nameDetails.RelatedTopics[0].FirstURL}}</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="card-content" *ngIf="!nameDetails.RelatedTopics[0]">
+        <div class="card-content">
+          <div class="content">
+              No Results Found
+          </div>
+        </div>     
+      </div>
+    </div>
+  </div>  
+
+</div>

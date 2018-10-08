@@ -1,0 +1,128 @@
+
+.columns {
+    width: 100%;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    margin-top: -0.75rem;
+    display: flex;
+}
+  
+.column {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 0.75rem;
+  }
+
+.column.is-two-thirds {
+    flex: none;
+    width: 66.6666%;
+  }
+
+.column.is-one-third {
+    flex: none;
+    width: 33.3333%;
+}  
+
+.input {
+    border: 1px solid #dbdbdb;
+    color: #363636;
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+    max-width: 100%;
+    width: 100%;
+    font-size: .75rem;
+    margin-bottom: 5px;
+    height: 2.25em;
+    padding-left: 0.75em;
+}
+.input::-moz-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+
+.input::-webkit-input-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+
+.input:-moz-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+
+.input:-ms-input-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, th {
+    padding: 0;
+    text-align: left;
+} 
+
+.table {
+    background-color: white;
+    color: #363636;
+  }
+  
+  .table td,
+  .table th {
+    border: 1px solid #dbdbdb;
+    border-width: 0 0 1px;
+    padding: 0.5em 0.75em;
+    vertical-align: top;
+  }
+
+  .table.is-fullwidth {
+    width: 100%;
+  }
+  
+  .table.is-hoverable tbody tr:not(.is-selected):hover {
+    background-color: #fafafa;
+  }  
+
+  .table.is-narrow td,
+.table.is-narrow th {
+  padding: 0.25em 0.5em;
+}
+.card {
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    color: #4a4a4a;
+    max-width: 100%;
+    position: relative;
+}
+  
+.card-header {
+    background-color: none;
+    align-items: stretch;
+    box-shadow: 0 1px 2px rgba(10, 10, 10, 0.1);
+    display: flex;
+}
+  
+.card-header-title {
+    align-items: center;
+    color: #363636;
+    display: flex;
+    flex-grow: 1;
+    font-weight: 700;
+    padding: 0.75rem;
+}
+
+.card-content {
+    background-color: none;
+    padding: 1.5rem;
+}
+
+.media-left {
+    margin-right: 1rem;
+}
+    
+.media-content {
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: left;
+}
+  
