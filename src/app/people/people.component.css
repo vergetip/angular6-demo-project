@@ -1,28 +1,20 @@
 
 .columns {
     width: 100%;
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-    margin-top: -0.75rem;
     display: flex;
+    justify-content: space-around;
 }
-  
-.column {
-    display: block;
-    flex-basis: 0;
-    flex-grow: 1;
-    flex-shrink: 1;
-    padding: 0.75rem;
-  }
+.columns > * {
+    padding: 10px;
+    flex: 1 100%;
+}
 
 .column.is-two-thirds {
-    flex: none;
-    width: 66.6666%;
-  }
+    flex: 2;
+}
 
 .column.is-one-third {
-    flex: none;
-    width: 33.3333%;
+    flex: 1;
 }  
 
 .input {
@@ -36,6 +28,7 @@
     height: 2.25em;
     padding-left: 0.75em;
 }
+
 .input::-moz-placeholder {
   color: rgba(54, 54, 54, 0.3);
 }
